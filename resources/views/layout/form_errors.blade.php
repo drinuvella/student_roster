@@ -8,6 +8,6 @@
     </div>
 @else
     <div class="text-center px-xl-3">
-        {{"Just an empty card"}}
+        {{"No Errors"}}
     </div>
 @endif    

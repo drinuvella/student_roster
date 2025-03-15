@@ -59,7 +59,7 @@
         @include('layout.sort')
         
         <div class="text-center px-xl-3">
-            <button class="btn btn-secondary btn-block" type="button" data-toggle="modal" data-target="#student-form-modal">Filter</button>
+            <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#student-form-modal">Filter</button>
         </div>
     </div>
 @endsection
