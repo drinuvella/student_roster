@@ -10,14 +10,14 @@
         </div>
 
         <div class="row flex-lg-nowrap">
-        <div class="col mb-3">
+        <div class="col col-lg-9 mb-3">
             <div class="e-panel card">
                 <div class="card-body">
                     @yield('main-card')
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-3 mb-3">
+        <div class="col-12 col-lg-4 mb-3">
             <div class="card">
                 <div class="card-body">
                     @yield('secondary-card')

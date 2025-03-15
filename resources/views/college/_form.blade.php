@@ -7,7 +7,7 @@
             <div class="col">
               <div class="form-group">
                 <label>Name</label>
-                <input class="form-control" type="text" name="name" placeholder="Harvard" value="{{ old('name',$college->name) }}">
+                <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" placeholder="Harvard" value="{{ old('name',$college->name) }}">
               </div>
             </div>
           </div>
@@ -15,7 +15,7 @@
             <div class="col">
               <div class="form-group">
                 <label>Address</label>
-                <input class="form-control" type="text" name="address" placeholder="Massachusetts ,USA" value="{{ old('address',$college->address) }}">
+                <input class="form-control @error('address') is-invalid @enderror" type="text" name="address" placeholder="Massachusetts ,USA" value="{{ old('address',$college->address) }}">
               </div>
             </div>
           </div>

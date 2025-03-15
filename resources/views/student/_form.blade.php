@@ -7,7 +7,7 @@
             <div class="col">
               <div class="form-group">
                 <label>Name</label>
-                <input class="form-control" type="text" name="name" value="{{ old('name',$student->name) }}" placeholder="Giuseppi">
+                <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{ old('name',$student->name) }}" placeholder="Giuseppi">
               </div>
             </div>
           </div>
@@ -21,7 +21,7 @@
             <div class="col">
               <div class="form-group">
                 <label>Phone</label>
-                <input class="form-control @error('phone') is-invalid @enderror" type="text" name="phone" value="{{ old('phone',$student->phone) }}">
+                <input class="form-control @error('phone') is-invalid @enderror" type="text" name="phone" value="{{ old('phone',$student->phone) }}" placeholder="12345678">
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@
             <div class="col">
               <div class="form-group">
                 <label>College</label>
-                  <select name="college_id" id="college_id" class="form-control">
+                  <select name="college_id" id="college_id" class="form-control @error('college_id') is-invalid @enderror">
                       @foreach ($colleges as $id => $name)
                           <option {{ $id == old('college_id',$student->college_id) ? 'selected' : '' }} value="{{ $id }}">{{ $name }}</option>
                       @endforeach
