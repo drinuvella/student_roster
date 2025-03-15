@@ -30,6 +30,8 @@ Route::get('/college/{id}/edit',[CollegeController::class,'edit'])->name('colleg
 
 Route::put('/college/{id}',[CollegeController::class,'update'])->name('college.update');
 
+Route::get('/college/{id}',[CollegeController::class,'show'])->name('college.show');
+
 Route::delete('/college/{id}',[CollegeController::class,'destroy'])->name('college.destroy');
 
 //* Students

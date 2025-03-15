@@ -24,6 +24,9 @@
                                 <a href="{{route('college.edit',$college->id)}}">
                                     <button class="btn btn-sm btn-outline-secondary badge" type="button" data-toggle="modal" data-target="#user-form-modal">Edit</button>
                                 </a>
+                                <a href="{{route('college.show',$college->id)}}">
+                                    <button class="btn btn-sm btn-outline-secondary badge" type="button" data-toggle="modal" data-target="#user-form-modal">View</button>
+                                </a>
                                 <a class="btn-delete" href="{{route('college.destroy',$college->id)}}">
                                     <button class="btn btn-sm btn-outline-secondary badge" type="button"><i class="fa fa-trash"></i></button>
                                 </a>
