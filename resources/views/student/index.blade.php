@@ -30,6 +30,9 @@
                                 <a href="{{route('student.edit',$student->id)}}">
                                     <button class="btn btn-sm btn-outline-secondary badge" type="button" data-toggle="modal" data-target="#user-form-modal">Edit</button>
                                 </a>
+                                <a href="{{route('student.show',$student->id)}}">
+                                    <button class="btn btn-sm btn-outline-secondary badge" type="button" data-toggle="modal" data-target="#user-form-modal">View</button>
+                                </a>
                                 <a class="btn-delete" href="{{route('student.destroy',$student->id)}}">
                                     <button class="btn btn-sm btn-outline-secondary badge" type="button"><i class="fa fa-trash"></i></button>
                                 </a>
@@ -59,7 +62,7 @@
         @include('layout.sort')
         
         <div class="text-center px-xl-3">
-            <button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#student-form-modal">Filter</button>
+            <button class="btn btn-primary btn-filter btn-block" type="button" data-toggle="modal" data-target="#student-form-modal">Filter</button>
         </div>
     </div>
 @endsection

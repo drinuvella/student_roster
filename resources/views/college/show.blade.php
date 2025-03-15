@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit College</h5>
+                <h5 class="modal-title">College</h5>
             </div>
             <div class="modal-body">
             <div class="py-1">

@@ -1,4 +1,4 @@
-document.querySelector('.btn-secondary').addEventListener('click', function() {
+document.querySelector('.btn-filter').addEventListener('click', function() {
     const collegeId = document.getElementById('college_id').value
     const sort = document.getElementById('sort').value
     const url = window.location.href
