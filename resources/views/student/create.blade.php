@@ -15,7 +15,5 @@
 @endsection
 
 @section('secondary-card')
-    <div class="text-center px-xl-3">
-        {{"Just an empty card"}}
-    </div>
+    @include('layout.form_errors')
 @endsection
