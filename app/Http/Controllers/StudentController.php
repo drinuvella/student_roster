@@ -53,7 +53,7 @@ class StudentController extends Controller
         if(is_null($student))
             return redirect()->route('student.index');
 
-        $colleges = College::orderby('name')->pluck('name', 'id')->prepend('All Colleges', '');;
+        $colleges = College::orderby('name')->pluck('name', 'id')->prepend('All Colleges', '');
 
         return view('student.edit',compact('student','colleges'));
     }
@@ -74,6 +74,14 @@ class StudentController extends Controller
         $student->update($request->all());
 
         return redirect()->route('student.index');
+    }
+
+    public function show($id){
+        $student = Student::find($id);
+        if(is_null($student))
+            return redirect()->route('student.index');
+
+        return view('student.show',compact('student'));
     }
 
     public function destroy($id){
