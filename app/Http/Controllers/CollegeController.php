@@ -52,6 +52,14 @@ class CollegeController extends Controller
         return redirect()->route('college.index');
     }
 
+    public function show($id){
+        $college = College::find($id);
+        if(is_null($college))
+            return redirect()->route('college.index');
+
+        return view('college.show',compact('college'));
+    }
+
     public function destroy($id){
         $college = College::find($id);
         if(is_null($college))
