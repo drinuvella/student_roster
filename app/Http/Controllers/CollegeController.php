@@ -16,6 +16,7 @@ class CollegeController extends Controller
 
     public function create(){
         $college = new College();
+
         return view('college.create', compact('college'));
     }
 
@@ -26,13 +27,14 @@ class CollegeController extends Controller
         ]);
 
         College::create($request->all());
-        return redirect()->route('college.index');
+
+        return redirect()->route('college.index')->with('message', 'College has been added successfully');
     }
 
     public function edit($id){
         $college = College::find($id);
         if(is_null($college))
-            return redirect()->route('college.index');
+            return redirect()->route('college.index')->with('error', 'College not found');
 
         return view('college.edit',compact('college'));
     }
@@ -44,28 +46,32 @@ class CollegeController extends Controller
         ]);
 
         $college = College::find($id);
+
         if(is_null($college))
-            return redirect()->route('college.index');
+            return redirect()->route('college.index')->with('error', 'Failed to update College');
 
         $college->update($request->all());
 
-        return redirect()->route('college.index');
+        return redirect()->route('college.index')->with('message','College has been updated');
     }
 
     public function show($id){
         $college = College::find($id);
+
         if(is_null($college))
-            return redirect()->route('college.index');
+            return redirect()->route('college.index')->with('error','College not found');
 
         return view('college.show',compact('college'));
     }
 
     public function destroy($id){
         $college = College::find($id);
+
         if(is_null($college))
-            return redirect()->route('college.index');
+            return redirect()->route('college.index')->with('error','Failed to delete College');
 
         $college->delete();
-        return redirect()->route('college.index');
+
+        return redirect()->route('college.index')->with('message','College has been deleted');
     }
 }

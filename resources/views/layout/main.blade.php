@@ -20,14 +20,16 @@
         <div class="col-12 col-lg-4 mb-3">
             <div class="card">
                 <div class="card-body">
+                    @if ($message = session('message') ?? session('error'))
+                        <div class="alert {{ session('message') ? 'alert-success' : 'alert-danger' }}">
+                            {{ $message }}
+                        </div>
+                        <hr class="my-3">
+                    @endif
                     @yield('secondary-card')
                 </div>
             </div>
         </div>
-        </div>
-
-        <!-- User Form Modal -->
-        <div class="modal fade" role="dialog" tabindex="-1" id="user-form-modal">
         </div>
     </div>
     </div>
