@@ -15,6 +15,7 @@ class StudentController extends Controller
         
         $colleges = College::orderby('name')->pluck('name', 'id')->prepend('All Colleges', '');
 
+        //if unclear also takes care of any invalid sorting format
         if($sorting!='desc')
             $sorting = 'asc';
 
