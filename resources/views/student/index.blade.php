@@ -55,15 +55,9 @@
     </div>
     <hr class="my-3">
     <div class="filter">
-        <select name="college_id" id="college_id" class="form-control mb-2">
-            @foreach ($colleges as $id => $name)
-                <option {{$id == $college_id?'selected':''}}  value="{{ $id }}">{{ $name }}</option>
-            @endforeach
-        </select>
-        <select name="sort" id="sort" class="form-control mb-4">
-            <option {{$sorting == "asc" ? 'selected':''}} value="asc">Ascending</option>
-            <option {{$sorting == "desc" ? 'selected':''}} value="desc">Descending</option>
-        </select>
+        @include('layout.filter')
+        @include('layout.sort')
+        
         <div class="text-center px-xl-3">
             <button class="btn btn-secondary btn-block" type="button" data-toggle="modal" data-target="#student-form-modal">Filter</button>
         </div>

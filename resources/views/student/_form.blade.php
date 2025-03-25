@@ -6,20 +6,6 @@
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label>Phone</label>
-                <input class="form-control" type="text" name="phone" value="{{ old('phone',$student->phone) }}" placeholder="12345678">
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-group">
-                <label>Date Of Birth</label>
-                <input class="form-control" type="date" name="dob" value="{{ old('dob',$student->dob) }}">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="form-group">
                 <label>Name</label>
                 <input class="form-control" type="text" name="name" value="{{ old('name',$student->name) }}" placeholder="Giuseppi">
               </div>
@@ -29,7 +15,21 @@
             <div class="col">
               <div class="form-group">
                 <label>Email</label>
-                <input class="form-control" type="text" name="email" value="{{ old('email',$student->email) }}" placeholder="giuseppi@email.com">
+                <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" value="{{ old('email',$student->email) }}">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Phone</label>
+                <input class="form-control @error('phone') is-invalid @enderror" type="text" name="phone" value="{{ old('phone',$student->phone) }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Date Of Birth</label>
+                <input class="form-control @error('dob') is-invalid @enderror" type="date" name="dob" value="{{ old('dob',$student->dob) }}">
               </div>
             </div>
             <div class="col">
